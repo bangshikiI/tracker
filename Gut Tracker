@@ -1,1 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>30-Day Candida & Gut Health Reset</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF6EE;
+    --cream-2:#F3EDE0;
+    --card:#FFFEFB;
+    --sage:#9CAE94;
+    --sage-dark:#7C9272;
+    --forest:#3F5C45;
+    --forest-deep:#2A3F2E;
+    --beige:#E7DCC6;
+    --beige-warm:#D9C7A6;
+    --ink:#33392F;
+    --ink-soft:#6E7565;
+    --line:#E5DDCB;
+    --red-soft:#C97B6A;
+    --red-bg:#F7E9E4;
+    --gold:#C9A24B;
+    --shadow: 0 8px 24px -8px rgba(63,92,69,0.18);
+    --shadow-lg: 0 20px 48px -16px rgba(63,92,69,0.25);
+    --radius:22px;
+  }
+  body.dark{
+    --cream:#1B2118;
+    --cream-2:#222A1E;
+    --card:#242D20;
+    --sage:#8FAE84;
+    --sage-dark:#A9C49C;
+    --forest:#8FAE84;
+    --forest-deep:#C7DABB;
+    --beige:#3A3326;
+    --beige-warm:#46402F;
+    --ink:#E9EBE2;
+    --ink-soft:#A8AE9C;
+    --line:#36402F;
+    --red-soft:#E09180;
+    --red-bg:#3A2724;
+    --gold:#E0C173;
+    --shadow: 0 8px 24px -8px rgba(0,0,0,0.45);
+    --shadow-lg: 0 20px 48px -16px rgba(0,0,0,0.55);
+  }
+  body.dark .hero{
+    background:linear-gradient(135deg,#10150E 0%, #1C2A18 55%, #2E3D27 100%);
+  }
+  body.dark .achievement{
+    background:linear-gradient(135deg,#10150E,#2E3D27);
+  }
+  body.dark .sidebar, body.dark .mobile-bar{
+    background:linear-gradient(180deg,#0F140D,#16200F);
+  }
+  body.dark .avoid-card{background:#2E211E;border-color:#46322C;}
+  body.dark .avoid-card .item{color:#E0BDB2;}
+  body.dark .avoid-card .head .icon-badge{background:#46322C;color:var(--red-soft);}
+  body.dark table.planner td:first-child{background:var(--beige);}
+  body.dark .seal{background:#46402F;}
+  .theme-toggle{
+    display:flex;align-items:center;justify-content:center;gap:6px;
+    width:100%;margin-top:10px;padding:9px 12px;border-radius:30px;
+    background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);
+    color:#D9E0CF;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;
+    cursor:pointer;
+  }
+  .theme-toggle:hover{background:rgba(255,255,255,0.14);}
+  .mobile-theme-toggle{
+    display:none;align-items:center;gap:4px;flex-shrink:0;
+    background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);
+    color:#fff;border-radius:30px;padding:8px 10px;font-size:16px;margin-left:auto;
+  }
+  @media (max-width:880px){ .mobile-theme-toggle{display:flex;} }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--cream);
+    font-family:'Inter',sans-serif;
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces',serif;
+    color:var(--forest-deep);
+    letter-spacing:-0.01em;
+  }
+  .app{
+    display:flex;
+    min-height:100vh;
+  }
+  /* SIDEBAR NAV */
+  .sidebar{
+    width:230px;
+    flex-shrink:0;
+    background:linear-gradient(180deg,var(--forest-deep),var(--forest));
+    color:#EDEFE6;
+    padding:28px 16px;
+    position:sticky;
+    top:0;
+    height:100vh;
+    overflow-y:auto;
+  }
+  .sidebar .brand{
+    font-family:'Fraunces',serif;
+    font-size:18px;
+    font-weight:600;
+    color:#fff;
+    padding:0 10px 22px 10px;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+    margin-bottom:16px;
+    line-height:1.3;
+  }
+  .sidebar .brand span{display:block;font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#C7D4BE;margin-top:6px;}
+  .navbtn{
+    display:flex;align-items:center;gap:10px;
+    width:100%;text-align:left;
+    background:transparent;border:none;color:#D9E0CF;
+    font-family:'Inter',sans-serif;font-size:13.5px;font-weight:500;
+    padding:10px 12px;border-radius:12px;cursor:pointer;
+    margin-bottom:2px;transition:background .15s, color .15s;
+  }
+  .navbtn .num{
+    font-family:'Fraunces',serif;font-size:12px;color:#9BB08F;width:18px;flex-shrink:0;
+  }
+  .navbtn:hover{background:rgba(255,255,255,0.08);color:#fff;}
+  .navbtn.active{background:#EDEFE6;color:var(--forest-deep);font-weight:600;}
+  .navbtn.active .num{color:var(--sage-dark);}
 
+  /* MAIN */
+  .main{flex:1;min-width:0;padding:36px 40px 80px;max-width:1180px;margin:0 auto;}
+  .page{display:none;animation:fadein .35s ease;}
+  .page.active{display:block;}
+  @keyframes fadein{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+
+  .page-head{margin-bottom:28px;}
+  .eyebrow{font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:8px;}
+  .page-title{font-size:32px;font-weight:600;margin:0 0 6px;}
+  .page-sub{color:var(--ink-soft);font-size:14.5px;margin:0;max-width:620px;line-height:1.5;}
+
+  .grid{display:grid;gap:18px;}
+  .grid-2{grid-template-columns:repeat(2,1fr);}
+  .grid-3{grid-template-columns:repeat(3,1fr);}
+  .grid-4{grid-template-columns:repeat(4,1fr);}
+  @media (max-width:900px){.grid-3,.grid-4{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:640px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
+
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px;
+    box-shadow:var(--shadow);
+  }
+  .card h3{font-size:16px;margin:0 0 4px;font-weight:600;}
+  .card .muted{color:var(--ink-soft);font-size:12.5px;}
+
+  /* Dashboard hero */
+  .hero{
+    background:linear-gradient(135deg,var(--forest-deep) 0%, var(--forest) 55%, var(--sage-dark) 100%);
+    border-radius:28px;color:#fff;padding:36px 34px;margin-bottom:26px;
+    display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
+    box-shadow:var(--shadow-lg);
+  }
+  .hero-left h1{color:#fff;font-size:30px;margin:0 0 8px;font-weight:500;}
+  .hero-left p{color:#D9E0CF;font-size:14px;margin:0;max-width:420px;}
+  .ring-wrap{display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
+  .ring-stat{text-align:center;}
+  .ring-stat .label{font-size:11px;color:#C7D4BE;text-transform:uppercase;letter-spacing:.08em;margin-top:6px;}
+  .ring-num{font-family:'Fraunces',serif;font-size:26px;font-weight:600;fill:#fff;}
+  @media (max-width:640px){
+    .ring-wrap svg{width:100px;height:100px;}
+  }
+
+  .stat-row{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.18);border-radius:30px;padding:7px 14px;font-size:12px;color:#EDEFE6;display:flex;align-items:center;gap:6px;}
+
+  /* progress bar */
+  .pbar-track{width:100%;height:9px;border-radius:30px;background:var(--cream-2);overflow:hidden;}
+  .pbar-fill{height:100%;border-radius:30px;background:linear-gradient(90deg,var(--sage),var(--forest));transition:width .4s;}
+  .tracker-card .row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;}
+  .tracker-card .row .name{font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px;}
+  .tracker-card .row .val{font-size:12px;color:var(--ink-soft);}
+  .icon-badge{width:30px;height:30px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+
+  .control-row{display:flex;align-items:center;gap:10px;margin-top:6px;}
+  .stepper{display:flex;align-items:center;gap:8px;background:var(--cream-2);border-radius:30px;padding:4px;}
+  .stepper button{width:26px;height:26px;border:none;border-radius:50%;background:var(--card);box-shadow:0 1px 4px rgba(0,0,0,.08);font-size:15px;cursor:pointer;color:var(--forest);}
+  .stepper .n{font-size:13px;font-weight:600;min-width:34px;text-align:center;}
+
+  input[type=range]{-webkit-appearance:none;width:100%;height:6px;border-radius:30px;background:var(--cream-2);}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--forest);cursor:pointer;border:3px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.25);}
+  input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--forest);cursor:pointer;border:3px solid #fff;}
+
+  /* checklist */
+  .check-item{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:8px;transition:background .15s,border-color .15s;cursor:pointer;}
+  .check-item:hover{border-color:var(--sage);}
+  .check-item.checked{background:#EEF3E9;border-color:var(--sage);}
+  .check-item.checked .label{text-decoration:line-through;color:var(--ink-soft);}
+  .checkbox{width:21px;height:21px;border-radius:7px;border:2px solid var(--sage-dark);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;transition:background .15s;}
+  .check-item.checked .checkbox{background:var(--forest);border-color:var(--forest);}
+  .check-item .label{font-size:14px;flex:1;}
+  .check-item .meta{font-size:11.5px;color:var(--ink-soft);}
+
+  /* badges */
+  .badge{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:30px;font-size:11.5px;font-weight:600;background:var(--beige);color:var(--forest-deep);}
+  .badge.green{background:#E3ECDE;color:var(--forest-deep);}
+  .badge.gold{background:#F3E6BF;color:#8A6A1F;}
+  .badge.red{background:var(--red-bg);color:var(--red-soft);}
+
+  /* week timeline */
+  .week-card{position:relative;padding-left:26px;}
+  .week-card::before{content:"";position:absolute;left:0;top:6px;bottom:-26px;width:2px;background:var(--line);}
+  .week-card:last-child::before{display:none;}
+  .week-dot{position:absolute;left:-6px;top:0;width:14px;height:14px;border-radius:50%;background:var(--forest);border:3px solid var(--cream);}
+  .week-block{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;margin-bottom:30px;box-shadow:var(--shadow);}
+  .week-block h2{font-size:20px;margin:0 0 2px;}
+  .week-block .week-tag{font-size:11.5px;color:var(--sage-dark);font-weight:600;text-transform:uppercase;letter-spacing:.08em;}
+  .week-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:16px;}
+  @media (max-width:900px){.week-cols{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:640px){.week-cols{grid-template-columns:1fr;}}
+  .week-col h4{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);margin:0 0 8px;display:flex;gap:6px;align-items:center;}
+  .week-col ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.6;color:var(--ink);}
+  .week-col ul li{margin-bottom:4px;}
+
+  /* food cards */
+  .food-cat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);}
+  .food-cat .head{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+  .food-cat .head .icon-badge{width:38px;height:38px;font-size:18px;border-radius:12px;}
+  .food-cat ul{margin:0;padding-left:0;list-style:none;font-size:13.5px;}
+  .food-cat ul li{padding:6px 0;border-bottom:1px solid var(--cream-2);}
+  .food-cat ul li:last-child{border-bottom:none;}
+  .avoid-card{background:var(--red-bg);border:1px solid #ECD3CB;border-radius:var(--radius);padding:18px;}
+  .avoid-card .head{display:flex;align-items:center;gap:10px;margin-bottom:6px;}
+  .avoid-card .head .icon-badge{background:#F0D9D1;color:var(--red-soft);}
+  .avoid-card .item{font-size:13.5px;color:#7A4A40;}
+
+  /* tables */
+  table.planner{width:100%;border-collapse:separate;border-spacing:0 10px;}
+  table.planner th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);padding:0 12px 4px;}
+  table.planner td{background:var(--card);border:1px solid var(--line);padding:12px;font-size:13px;vertical-align:top;}
+  table.planner td:first-child{border-radius:14px 0 0 14px;font-weight:600;color:var(--forest-deep);background:var(--cream-2);}
+  table.planner td:last-child{border-radius:0 14px 14px 0;}
+  table.planner input, table.planner textarea{width:100%;border:none;background:transparent;font-family:'Inter',sans-serif;font-size:13px;resize:none;color:var(--ink);}
+  table.planner input:focus, table.planner textarea:focus{outline:none;}
+  table.planner input::placeholder, table.planner textarea::placeholder{color:#B7BCA9;}
+
+  /* habit grid */
+  .habit-grid-wrap{overflow-x:auto;}
+  table.habits{border-collapse:collapse;font-size:11px;}
+  table.habits th, table.habits td{padding:5px;text-align:center;}
+  table.habits th.day-num{font-size:10px;color:var(--ink-soft);font-weight:500;}
+  table.habits th.habit-name{text-align:left;font-size:12px;color:var(--ink);min-width:150px;font-weight:600;}
+  table.habits td.cell{width:26px;height:26px;}
+  .hb-box{width:20px;height:20px;border-radius:6px;border:2px solid var(--sage-dark);margin:0 auto;cursor:pointer;background:#fff;}
+  .hb-box.on{background:var(--forest);border-color:var(--forest);}
+
+  /* slider scorecard */
+  .score-card .score-val{font-family:'Fraunces',serif;font-size:24px;color:var(--forest-deep);min-width:34px;text-align:right;}
+
+  /* journal */
+  .journal-card label{display:block;font-size:13px;font-weight:600;color:var(--forest-deep);margin-bottom:6px;}
+  .journal-card textarea{width:100%;min-height:60px;border:1px solid var(--line);border-radius:14px;padding:12px;font-family:'Inter',sans-serif;font-size:13.5px;background:var(--cream-2);color:var(--ink);resize:vertical;}
+  .journal-card textarea:focus{outline:2px solid var(--sage);}
+
+  /* day1 vs day30 */
+  .vs-row{display:grid;grid-template-columns:1fr 90px 1fr;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--cream-2);}
+  .vs-row:last-child{border-bottom:none;}
+  .vs-row .metric{font-size:12px;color:var(--ink-soft);text-align:center;font-weight:600;text-transform:uppercase;letter-spacing:.04em;}
+  .vs-row input{width:100%;text-align:center;border:1px solid var(--line);border-radius:10px;padding:8px;font-size:14px;background:var(--cream-2);}
+
+  .achievement{
+    text-align:center;background:linear-gradient(135deg,var(--forest-deep),var(--sage-dark));
+    border-radius:28px;color:#fff;padding:46px 24px;margin-top:24px;box-shadow:var(--shadow-lg);
+  }
+  .achievement .seal{width:90px;height:90px;border-radius:50%;background:#F3E6BF;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:38px;border:4px solid #fff;}
+  .achievement h2{color:#fff;font-size:24px;margin:0 0 6px;}
+  .achievement p{color:#D9E0CF;font-size:13.5px;max-width:420px;margin:0 auto;}
+
+  .footer-note{margin:50px auto 0;max-width:800px;text-align:center;font-size:11.5px;color:var(--ink-soft);line-height:1.6;padding:18px;border-top:1px solid var(--line);}
+
+  .small-note{font-size:11.5px;color:var(--ink-soft);background:var(--beige);padding:10px 14px;border-radius:12px;margin-bottom:18px;display:flex;gap:8px;align-items:flex-start;}
+
+  .section-title{font-size:14px;font-weight:600;color:var(--forest-deep);margin:30px 0 14px;display:flex;align-items:center;gap:8px;}
+  .section-title:first-child{margin-top:0;}
+
+  .meal-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);}
+  .meal-card .meal-title{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+  .meal-card .meal-title .icon-badge{background:var(--beige);color:var(--forest-deep);}
+
+  /* mobile top nav */
+  .mobile-bar{display:none;}
+  @media (max-width:880px){
+    .sidebar{display:none;}
+    .mobile-bar{
+      display:flex;overflow-x:auto;gap:6px;padding:12px 12px;
+      background:var(--forest-deep);position:sticky;top:0;z-index:50;
+      -webkit-overflow-scrolling:touch;scrollbar-width:none;
+    }
+    .mobile-bar::-webkit-scrollbar{display:none;}
+    .mobile-bar .navbtn{
+      color:#D9E0CF;white-space:nowrap;width:auto;flex-shrink:0;
+      flex-direction:column;gap:2px;padding:8px 12px;font-size:10.5px;
+      display:flex;align-items:center;
+    }
+    .mobile-bar .navbtn .num{display:none;}
+    .mobile-bar .navbtn .ico{font-size:18px;}
+    .mobile-bar .navbtn.active{background:#EDEFE6;}
+    .main{padding:18px 14px 60px;}
+  }
+  @media (max-width:640px){
+    .main{padding:14px 12px 50px;}
+    .page-title{font-size:24px;}
+    .page-sub{font-size:13px;}
+    .hero{flex-direction:column;align-items:flex-start;padding:24px 20px;border-radius:22px;}
+    .hero-left h1{font-size:23px;}
+    .ring-wrap{width:100%;justify-content:center;}
+    .stat-row{gap:8px;}
+    .pill{font-size:11px;padding:6px 11px;}
+    .card{padding:16px;border-radius:18px;}
+    .grid{gap:12px;}
+    .week-block{padding:16px;}
+    .week-cols{gap:12px;}
+    .check-item{padding:13px 14px;}
+    .checkbox{width:23px;height:23px;}
+    .hb-box{width:24px;height:24px;}
+    table.habits td.cell{width:30px;height:30px;}
+    table.habits th.day-num{font-size:9px;}
+    .habit-grid-wrap{margin:0 -12px;padding:0 12px;}
+    table.planner td, table.planner th{font-size:12.5px;}
+    .vs-row{grid-template-columns:1fr 70px 1fr;gap:6px;}
+    .vs-row .metric{font-size:10px;}
+    .vs-row input{padding:6px;font-size:13px;}
+    .achievement{padding:32px 18px;}
+    .stepper button{width:32px;height:32px;font-size:17px;}
+    input[type=range]{height:8px;}
+    input[type=range]::-webkit-slider-thumb{width:24px;height:24px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar">
+    <div class="brand">Gut Reset<span>30-Day Tracker</span></div>
+    <div id="navlist"></div>
+    <button class="theme-toggle" id="themeToggleDesktop">🌙 <span id="themeLabelDesktop">Dark Mode</span></button>
+  </nav>
+
+  <div class="mobile-bar" id="mobilebar"></div>
+
+  <main class="main">
+
+    <!-- PAGE 1 : DASHBOARD -->
+    <section class="page active" id="page-1">
+      <div class="hero">
+        <div class="hero-left">
+          <h1>30-Day Candida & Gut Health Reset</h1>
+          <p>Restore your gut · Reduce sugar cravings · Support your microbiome</p>
+          <div class="stat-row">
+            <div class="pill">🌿 Week <span id="weekIndicator">1</span> of 4</div>
+            <div class="pill">📅 Day <span id="dayIndicator">1</span> / 30</div>
+            <div class="pill">✅ <span id="dailyPct">0</span>% today's checklist</div>
+          </div>
+        </div>
+        <div class="ring-wrap">
+          <div>
+            <svg width="124" height="124" viewBox="0 0 124 124">
+              <circle cx="62" cy="62" r="52" stroke="rgba(255,255,255,0.18)" stroke-width="12" fill="none"/>
+              <circle id="dayRing" cx="62" cy="62" r="52" stroke="#F3E6BF" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7" transform="rotate(-90 62 62)"/>
+              <text x="62" y="58" text-anchor="middle" class="ring-num" id="ringDayLabel">1</text>
+              <text x="62" y="76" text-anchor="middle" fill="#D9E0CF" font-size="10" font-family="Inter">of 30 days</text>
+            </svg>
+            <div class="ring-stat"><div class="label">Overall Progress</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="small-note">📌 <span>Set "Current Day" below to update your progress ring, week indicator, and habit-grid focus across the whole tracker.</span></div>
+      <div class="card" style="margin-bottom:22px;max-width:320px;">
+        <h3>Current Day</h3>
+        <div class="control-row stepper" style="justify-content:flex-start;">
+          <button onclick="changeDay(-1)">–</button>
+          <span class="n" id="dayStepVal">1</span>
+          <button onclick="changeDay(1)">+</button>
+        </div>
+      </div>
+
+      <div class="grid grid-3" id="dashboardTrackers"></div>
+    </section>
+
+    <!-- PAGE 2: TIMELINE -->
+    <section class="page" id="page-2">
+      <div class="page-head">
+        <div class="eyebrow">Your Journey</div>
+        <h2 class="page-title">4-Week Reset Timeline</h2>
+        <p class="page-sub">Know what to expect — and what to celebrate — each step of the way.</p>
+      </div>
+      <div id="weeksContainer"></div>
+    </section>
+
+    <!-- PAGE 3: MORNING ROUTINE -->
+    <section class="page" id="page-3">
+      <div class="page-head">
+        <div class="eyebrow">Daily Ritual</div>
+        <h2 class="page-title">Morning Routine</h2>
+        <p class="page-sub">A gentle sequence to start your gut, mind, and energy off right.</p>
+      </div>
+      <div id="morningList" style="max-width:560px;"></div>
+    </section>
+
+    <!-- PAGE 4: NUTRITION TRACKER -->
+    <section class="page" id="page-4">
+      <div class="page-head">
+        <div class="eyebrow">Daily Nutrition</div>
+        <h2 class="page-title">Today's Meals</h2>
+        <p class="page-sub">Check off each pillar — protein, fat, veg, fermented food, fiber, water — across every meal.</p>
+      </div>
+      <div class="grid grid-2" id="mealsContainer"></div>
+    </section>
+
+    <!-- PAGE 5: ALLOWED FOODS -->
+    <section class="page" id="page-5">
+      <div class="page-head">
+        <div class="eyebrow">Nourish</div>
+        <h2 class="page-title">Allowed Foods</h2>
+        <p class="page-sub">Build every meal from these gut-loving categories.</p>
+      </div>
+      <div class="grid grid-3" id="allowedContainer"></div>
+    </section>
+
+    <!-- PAGE 6: FOODS TO AVOID -->
+    <section class="page" id="page-6">
+      <div class="page-head">
+        <div class="eyebrow">Mindful Choices</div>
+        <h2 class="page-title">Foods to Enjoy Less Often</h2>
+        <p class="page-sub">No need for guilt — just gentle awareness. These foods tend to feed sugar cravings and disrupt gut balance during your reset.</p>
+      </div>
+      <div class="grid grid-3" id="avoidContainer"></div>
+    </section>
+
+    <!-- PAGE 7: WEEKLY MEAL PLANNER -->
+    <section class="page" id="page-7">
+      <div class="page-head">
+        <div class="eyebrow">Plan Ahead</div>
+        <h2 class="page-title">Weekly Meal Planner</h2>
+        <p class="page-sub">Sketch your week so healthy choices are already decided.</p>
+      </div>
+      <div style="overflow-x:auto;">
+        <table class="planner" id="plannerTable"></table>
+      </div>
+    </section>
+
+    <!-- PAGE 8: SUPPLEMENT TRACKER -->
+    <section class="page" id="page-8">
+      <div class="page-head">
+        <div class="eyebrow">Daily Support</div>
+        <h2 class="page-title">Supplement Tracker</h2>
+        <p class="page-sub">Track what you take, when you take it.</p>
+      </div>
+      <div class="grid grid-3" id="supplementContainer"></div>
+      <div class="small-note" style="margin-top:18px;max-width:640px;">⚕️ <span>Only take supplements that are appropriate for you or recommended by your healthcare professional.</span></div>
+    </section>
+
+    <!-- PAGE 9: SYMPTOMS TRACKER -->
+    <section class="page" id="page-9">
+      <div class="page-head">
+        <div class="eyebrow">Check In</div>
+        <h2 class="page-title">Symptoms Tracker</h2>
+        <p class="page-sub">Rate how you feel today, 1 (low) – 10 (great), across each measure.</p>
+      </div>
+      <div class="grid grid-2" id="symptomsContainer"></div>
+      <div class="card" style="margin-top:18px;">
+        <h3>📈 Trend Snapshot</h3>
+        <p class="muted" style="margin-bottom:14px;">Average of today's ratings vs. a thriving baseline of 8.</p>
+        <div id="symptomsTrendBars"></div>
+      </div>
+    </section>
+
+    <!-- PAGE 10: HABIT TRACKER GRID -->
+    <section class="page" id="page-10">
+      <div class="page-head">
+        <div class="eyebrow">30 Days</div>
+        <h2 class="page-title">Daily Habit Tracker</h2>
+        <p class="page-sub">Tap a box for each day you complete a habit. Consistency compounds.</p>
+      </div>
+      <div class="habit-grid-wrap">
+        <table class="habits" id="habitsTable"></table>
+      </div>
+    </section>
+
+    <!-- PAGE 11: WEEKLY REFLECTION -->
+    <section class="page" id="page-11">
+      <div class="page-head">
+        <div class="eyebrow">Reflect</div>
+        <h2 class="page-title">Weekly Reflection</h2>
+        <p class="page-sub">Pause at the end of each week to notice patterns and set intentions.</p>
+      </div>
+      <div class="control-row stepper" style="margin-bottom:18px;justify-content:flex-start;width:fit-content;">
+        <button onclick="changeReflectionWeek(-1)">–</button>
+        <span class="n">Week <span id="reflWeekVal">1</span></span>
+        <button onclick="changeReflectionWeek(1)">+</button>
+      </div>
+      <div class="grid grid-2" id="journalContainer"></div>
+    </section>
+
+    <!-- PAGE 12: FINAL REVIEW -->
+    <section class="page" id="page-12">
+      <div class="page-head">
+        <div class="eyebrow">Celebrate</div>
+        <h2 class="page-title">Final Review — Day 1 vs Day 30</h2>
+        <p class="page-sub">Look how far you've come.</p>
+      </div>
+      <div class="card" id="vsCard"></div>
+      <div class="achievement">
+        <div class="seal">🏆</div>
+        <h2>30 Days Complete</h2>
+        <p>You showed up for your gut, your energy, and your future self — one small habit at a time. Keep the momentum going.</p>
+      </div>
+    </section>
+
+    <!-- PAGE 13: EXERCISE TRACKER -->
+    <section class="page" id="page-13">
+      <div class="page-head">
+        <div class="eyebrow">Move Daily</div>
+        <h2 class="page-title">Body Exercise Checker</h2>
+        <p class="page-sub">Whole body, cardio, and targeted training Monday–Friday. Weekends are for rest and recovery.</p>
+      </div>
+      <div class="small-note">📌 <span>This follows your "Current Day" from the Dashboard, mapped to a Mon–Sun week (Day 1 = Monday). Adjust the day there to jump around.</span></div>
+      <div class="card" style="margin-bottom:22px;max-width:320px;">
+        <h3 id="exerciseDayLabel">Today's Focus</h3>
+        <div class="muted" id="exerciseDaySub"></div>
+      </div>
+      <div id="exerciseContainer"></div>
+
+      <div class="section-title" style="margin-top:36px;">🗓️ Weekly Exercise Overview</div>
+      <div class="grid grid-3" id="exerciseWeekOverview"></div>
+    </section>
+
+    <div class="footer-note">This tracker is intended for wellness and habit tracking only. It is not intended to diagnose, treat, cure, or prevent any disease. Consult a qualified healthcare professional for medical concerns.</div>
+  </main>
+</div>
+
+<script>
+/* ---------------- NAV ---------------- */
+const pages = [
+  {id:1, label:"Dashboard", icon:"🏠"},
+  {id:2, label:"Timeline", icon:"🗺️"},
+  {id:3, label:"Morning Routine", icon:"🌅"},
+  {id:4, label:"Nutrition", icon:"🍽️"},
+  {id:5, label:"Allowed Foods", icon:"🥑"},
+  {id:6, label:"Mindful Choices", icon:"🍩"},
+  {id:7, label:"Meal Planner", icon:"📅"},
+  {id:8, label:"Supplements", icon:"💊"},
+  {id:9, label:"Symptoms", icon:"📊"},
+  {id:10, label:"Habit Grid", icon:"🔥"},
+  {id:11, label:"Reflection", icon:"📝"},
+  {id:12, label:"Final Review", icon:"🏆"},
+  {id:13, label:"Exercise", icon:"🏋️"},
+];
+
+function buildNav(container, isMobile){
+  container.innerHTML = "";
+  pages.forEach(p=>{
+    const btn = document.createElement("button");
+    btn.className = "navbtn" + (p.id===1 ? " active":"");
+    btn.dataset.page = p.id;
+    btn.innerHTML = isMobile
+      ? `<span class="ico">${p.icon}</span><span>${p.label}</span>`
+      : `<span class="num">${String(p.id).padStart(2,"0")}</span>${p.icon} ${p.label}`;
+    btn.onclick = ()=> showPage(p.id);
+    container.appendChild(btn);
+  });
+}
+buildNav(document.getElementById("navlist"), false);
+buildNav(document.getElementById("mobilebar"), true);
+const mobileToggleBtn = document.createElement("button");
+mobileToggleBtn.className = "mobile-theme-toggle";
+mobileToggleBtn.id = "themeToggleMobile";
+mobileToggleBtn.textContent = "🌙";
+document.getElementById("mobilebar").appendChild(mobileToggleBtn);
+
+/* ---------------- THEME ---------------- */
+function applyTheme(dark){
+  document.body.classList.toggle("dark", dark);
+  document.getElementById("themeLabelDesktop").textContent = dark? "Light Mode" : "Dark Mode";
+  document.getElementById("themeToggleDesktop").firstChild.textContent = dark? "☀️ " : "🌙 ";
+  document.getElementById("themeToggleMobile").textContent = dark? "☀️" : "🌙";
+}
+let darkMode = false;
+try{ darkMode = JSON.parse(localStorage.getItem("gutreset_darkMode")||"false"); }catch(e){}
+applyTheme(darkMode);
+function toggleTheme(){
+  darkMode = !darkMode;
+  try{ localStorage.setItem("gutreset_darkMode", JSON.stringify(darkMode)); }catch(e){}
+  applyTheme(darkMode);
+}
+document.getElementById("themeToggleDesktop").onclick = toggleTheme;
+document.getElementById("themeToggleMobile").onclick = toggleTheme;
+
+function showPage(id){
+  document.querySelectorAll(".page").forEach(el=>el.classList.remove("active"));
+  document.getElementById("page-"+id).classList.add("active");
+  document.querySelectorAll(".navbtn").forEach(el=>{
+    el.classList.toggle("active", Number(el.dataset.page)===id);
+  });
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+/* ---------------- STATE ---------------- */
+const store = {
+  get(key, def){
+    try{ const v = localStorage.getItem("gutreset_"+key); return v===null? def : JSON.parse(v);}catch(e){return def;}
+  },
+  set(key, val){
+    try{ localStorage.setItem("gutreset_"+key, JSON.stringify(val)); }catch(e){}
+  }
+};
+
+let currentDay = store.get("currentDay", 1);
+
+function changeDay(delta){
+  currentDay = Math.min(30, Math.max(1, currentDay+delta));
+  store.set("currentDay", currentDay);
+  renderDashboardTop();
+  renderDashboardTrackers();
+  renderMorning();
+  renderMeals();
+  renderSupplements();
+  renderSymptoms();
+  renderExercise();
+}
+
+function renderDashboardTop(){
+  document.getElementById("dayStepVal").textContent = currentDay;
+  document.getElementById("dayIndicator").textContent = currentDay;
+  document.getElementById("ringDayLabel").textContent = currentDay;
+  document.getElementById("weekIndicator").textContent = Math.ceil(currentDay/7) > 4 ? 4 : Math.ceil(currentDay/7);
+  const pct = currentDay/30;
+  const circumference = 326.7;
+  document.getElementById("dayRing").setAttribute("stroke-dashoffset", circumference - circumference*pct);
+}
+
+/* ---------------- DASHBOARD TRACKERS ---------------- */
+const dashboardTrackers = [
+  {key:"water", name:"Water Intake", icon:"💧", color:"#E3F0EE", unit:"glasses", max:8, type:"stepper"},
+  {key:"mood", name:"Mood", icon:"🙂", color:"#F3E6BF", max:10, type:"slider"},
+  {key:"sleep", name:"Sleep Quality", icon:"🌙", color:"#E7E1F2", max:10, type:"slider"},
+  {key:"energy", name:"Energy", icon:"⚡", color:"#FBF0D6", max:10, type:"slider"},
+  {key:"cravings", name:"Sugar Cravings", icon:"🍬", color:"#F7E1DC", max:10, type:"slider", invert:true},
+  {key:"digestion", name:"Digestion Score", icon:"🌿", color:"#E3ECDE", max:10, type:"slider"},
+  {key:"bloating", name:"Bloating Score", icon:"🎈", color:"#EFE3F0", max:10, type:"slider", invert:true},
+];
+
+function renderDashboardTrackers(){
+  const c = document.getElementById("dashboardTrackers");
+  c.innerHTML = "";
+  dashboardTrackers.forEach(t=>{
+    const val = store.get("dash_"+t.key+"_d"+currentDay, t.type==="stepper"? 0 : 5);
+    const div = document.createElement("div");
+    div.className = "card tracker-card";
+    if(t.type==="stepper"){
+      div.innerHTML = `
+        <div class="row">
+          <div class="name"><span class="icon-badge" style="background:${t.color}">${t.icon}</span>${t.name}</div>
+          <div class="val">${val}/${t.max} ${t.unit}</div>
+        </div>
+        <div class="pbar-track"><div class="pbar-fill" style="width:${Math.min(100,val/t.max*100)}%"></div></div>
+        <div class="control-row stepper" style="margin-top:12px;justify-content:flex-start;">
+          <button data-act="dec">–</button><span class="n">${val}</span><button data-act="inc">+</button>
+        </div>`;
+      div.querySelector('[data-act="dec"]').onclick = ()=>{ updateDashVal(t.key, Math.max(0, val-1)); };
+      div.querySelector('[data-act="inc"]').onclick = ()=>{ updateDashVal(t.key, Math.min(t.max*2, val+1)); };
+    } else {
+      div.innerHTML = `
+        <div class="row">
+          <div class="name"><span class="icon-badge" style="background:${t.color}">${t.icon}</span>${t.name}</div>
+          <div class="val">${val}/10</div>
+        </div>
+        <div class="pbar-track"><div class="pbar-fill" style="width:${val/10*100}%; background:${t.invert? 'linear-gradient(90deg,#E8B0A0,var(--red-soft))':'linear-gradient(90deg,var(--sage),var(--forest))'}"></div></div>
+        <input type="range" min="0" max="10" value="${val}" style="margin-top:10px;">`;
+      div.querySelector("input").oninput = (e)=> updateDashVal(t.key, Number(e.target.value));
+    }
+    c.appendChild(div);
+  });
+  // daily completion pct from morning routine + meals
+  recalcDailyPct();
+}
+function updateDashVal(key, val){
+  store.set("dash_"+key+"_d"+currentDay, val);
+  renderDashboardTrackers();
+}
+
+/* ---------------- TIMELINE ---------------- */
+const weeks = [
+  {n:1, tag:"Foundation", objectives:["Eliminate added sugar","Introduce fermented foods","Hydrate consistently"], changes:["Mild cravings or fatigue as sugar clears","Possible initial bloating shift"], motivation:"The hardest part is the start — your microbiome is already beginning to shift.", milestones:["3 sugar-free days in a row","First fermented food tried"]},
+  {n:2, tag:"Stabilizing", objectives:["Build consistent meal rhythm","Add daily movement","Layer in fiber-rich vegetables"], changes:["Energy starts to even out","Digestion may feel calmer"], motivation:"Cravings often peak around day 10–12, then begin to fade — you're past the hardest stretch.", milestones:["7-day habit streak","Noticeable dip in cravings"]},
+  {n:3, tag:"Rebuilding", objectives:["Diversify the microbiome with variety","Prioritize sleep quality","Manage stress intentionally"], changes:["Skin and mood often improve","Bloating continues to reduce"], motivation:"Your gut lining and microbial diversity are actively rebuilding now.", milestones:["14-day reflection complete","Improved sleep score"]},
+  {n:4, tag:"Integration", objectives:["Solidify routines as lifestyle","Fine-tune what works for your body","Plan for life after day 30"], changes:["Steadier energy and mood","Clothes & digestion feel noticeably different"], motivation:"You're not finishing a challenge — you're proving a new normal to yourself.", milestones:["30-day completion","Personal before/after comparison"]},
+];
+function renderWeeks(){
+  const c = document.getElementById("weeksContainer");
+  c.innerHTML = "";
+  weeks.forEach(w=>{
+    const block = document.createElement("div");
+    block.className = "week-block";
+    block.innerHTML = `
+      <div class="week-tag">Week ${w.n} · Days ${(w.n-1)*7+1}–${w.n*7}</div>
+      <h2>${w.tag}</h2>
+      <div class="week-cols">
+        <div class="week-col"><h4>🎯 Objectives</h4><ul>${w.objectives.map(o=>`<li>${o}</li>`).join("")}</ul></div>
+        <div class="week-col"><h4>🌱 Expected Changes</h4><ul>${w.changes.map(o=>`<li>${o}</li>`).join("")}</ul></div>
+        <div class="week-col"><h4>✨ Motivation</h4><p style="font-size:13.5px;line-height:1.6;margin:0;">${w.motivation}</p></div>
+        <div class="week-col"><h4>🏁 Milestones</h4><ul>${w.milestones.map(o=>`<li>${o}</li>`).join("")}</ul></div>
+      </div>`;
+    c.appendChild(block);
+  });
+}
+
+/* ---------------- MORNING ROUTINE ---------------- */
+const morningItems = [
+  {key:"water500", label:"Drink 500mL water", icon:"💧"},
+  {key:"sunlight", label:"Morning sunlight", icon:"☀️"},
+  {key:"walk10", label:"10-minute walk", icon:"🚶"},
+  {key:"lemonginger", label:"Lemon + ginger water", icon:"🍋"},
+  {key:"stretch", label:"Stretching", icon:"🤸"},
+  {key:"breathe", label:"Deep breathing", icon:"🌬️"},
+  {key:"breakfast", label:"Healthy breakfast", icon:"🥣"},
+];
+function renderMorning(){
+  const c = document.getElementById("morningList");
+  c.innerHTML = "";
+  morningItems.forEach(item=>{
+    const sKey = "morning_"+item.key+"_d"+currentDay;
+    const checked = store.get(sKey, false);
+    const row = document.createElement("div");
+    row.className = "check-item" + (checked? " checked":"");
+    row.innerHTML = `<div class="checkbox">${checked? "✓":""}</div><div class="label">${item.icon} ${item.label}</div>`;
+    row.onclick = ()=>{
+      const newVal = !store.get(sKey,false);
+      store.set(sKey, newVal);
+      renderMorning();
+      recalcDailyPct();
+    };
+    c.appendChild(row);
+  });
+}
+
+/* ---------------- NUTRITION (MEALS) ---------------- */
+const mealTypes = [
+  {key:"breakfast", label:"Breakfast", icon:"🥣"},
+  {key:"lunch", label:"Lunch", icon:"🥗"},
+  {key:"dinner", label:"Dinner", icon:"🍲"},
+  {key:"snack", label:"Snack", icon:"🥒"},
+];
+const mealPillars = [
+  {key:"protein", label:"Protein", icon:"🍗"},
+  {key:"fat", label:"Healthy fat", icon:"🥑"},
+  {key:"veg", label:"Vegetables", icon:"🥦"},
+  {key:"ferment", label:"Fermented food", icon:"🫙"},
+  {key:"fiber", label:"Fiber", icon:"🌾"},
+  {key:"water", label:"Water", icon:"💧"},
+];
+function renderMeals(){
+  const c = document.getElementById("mealsContainer");
+  c.innerHTML = "";
+  mealTypes.forEach(meal=>{
+    const card = document.createElement("div");
+    card.className = "meal-card";
+    let rows = "";
+    mealPillars.forEach(p=>{
+      const sKey = `meal_${meal.key}_${p.key}_d${currentDay}`;
+      const checked = store.get(sKey, false);
+      rows += `<div class="check-item ${checked?'checked':''}" data-key="${sKey}" style="padding:9px 12px;">
+        <div class="checkbox">${checked?"✓":""}</div>
+        <div class="label" style="font-size:13px;">${p.icon} ${p.label}</div>
+      </div>`;
+    });
+    card.innerHTML = `<div class="meal-title"><span class="icon-badge">${meal.icon}</span><h3>${meal.label}</h3></div>${rows}`;
+    card.querySelectorAll(".check-item").forEach(el=>{
+      el.onclick = ()=>{
+        const k = el.dataset.key;
+        store.set(k, !store.get(k,false));
+        renderMeals();
+        recalcDailyPct();
+      };
+    });
+    c.appendChild(card);
+  });
+}
+
+/* daily completion % across morning routine + meal pillars */
+function recalcDailyPct(){
+  let total=0, done=0;
+  morningItems.forEach(item=>{ total++; if(store.get("morning_"+item.key+"_d"+currentDay,false)) done++; });
+  mealTypes.forEach(meal=> mealPillars.forEach(p=>{ total++; if(store.get(`meal_${meal.key}_${p.key}_d${currentDay}`,false)) done++; }));
+  const pct = total? Math.round(done/total*100) : 0;
+  const el = document.getElementById("dailyPct");
+  if(el) el.textContent = pct;
+}
+
+/* ---------------- ALLOWED FOODS ---------------- */
+const allowedFoods = [
+  {cat:"Protein", icon:"🍗", color:"#F0E6D2", items:["Wild-caught fish","Pasture-raised eggs","Organic chicken & turkey","Grass-fed beef (moderate)","Legumes & lentils"]},
+  {cat:"Healthy Fats", icon:"🥑", color:"#E3ECDE", items:["Avocado","Extra virgin olive oil","Coconut oil","Nuts & seeds (raw)","Ghee"]},
+  {cat:"Vegetables", icon:"🥦", color:"#DCE9D6", items:["Leafy greens","Broccoli & cauliflower","Zucchini & squash","Cucumber & celery","Garlic & onion"]},
+  {cat:"Low-Sugar Fruits", icon:"🫐", color:"#E7E1F2", items:["Berries","Green apple","Lemon & lime","Grapefruit","Avocado (as fruit)"]},
+  {cat:"Fermented Foods", icon:"🫙", color:"#F3E6BF", items:["Sauerkraut","Kimchi","Plain kefir","Unsweetened coconut yogurt","Miso (low-sodium)"]},
+  {cat:"Herbs & Spices", icon:"🌿", color:"#E3F0EE", items:["Ginger","Turmeric","Oregano","Cinnamon","Fresh basil"]},
+  {cat:"Healthy Drinks", icon:"🍵", color:"#EAF1E5", items:["Filtered water","Herbal teas","Lemon-ginger water","Bone broth","Unsweetened green tea"]},
+];
+function renderAllowed(){
+  const c = document.getElementById("allowedContainer");
+  c.innerHTML = "";
+  allowedFoods.forEach(f=>{
+    const div = document.createElement("div");
+    div.className = "food-cat";
+    div.innerHTML = `<div class="head"><span class="icon-badge" style="background:${f.color}">${f.icon}</span><h3 style="margin:0;">${f.cat}</h3></div>
+      <ul>${f.items.map(i=>`<li>${i}</li>`).join("")}</ul>`;
+    c.appendChild(div);
+  });
+}
+
+/* ---------------- FOODS TO AVOID ---------------- */
+const avoidFoods = [
+  {cat:"Sweets & Sugars", icon:"🍬", items:["Added sugars","Candy","Sweet cereals"]},
+  {cat:"Drinks", icon:"🥤", items:["Soft drinks","Fruit juice","Alcohol"]},
+  {cat:"Refined Grains", icon:"🍞", items:["White bread","Pastries"]},
+  {cat:"Processed Foods", icon:"📦", items:["Highly processed snacks","Artificial sweet snacks"]},
+];
+function renderAvoid(){
+  const c = document.getElementById("avoidContainer");
+  c.innerHTML = "";
+  avoidFoods.forEach(f=>{
+    const div = document.createElement("div");
+    div.className = "avoid-card";
+    div.innerHTML = `<div class="head"><span class="icon-badge">${f.icon}</span><h3 style="margin:0;color:#7A4A40;">${f.cat}</h3></div>
+      ${f.items.map(i=>`<div class="item">• ${i}</div>`).join("")}`;
+    c.appendChild(div);
+  });
+}
+
+/* ---------------- WEEKLY MEAL PLANNER ---------------- */
+const days7 = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+const plannerCols = ["Breakfast","Lunch","Dinner","Snack","Water","Notes"];
+function renderPlanner(){
+  const table = document.getElementById("plannerTable");
+  let html = "<tr><th></th>" + plannerCols.map(c=>`<th>${c}</th>`).join("") + "</tr>";
+  days7.forEach(day=>{
+    html += `<tr><td>${day}</td>`;
+    plannerCols.forEach(col=>{
+      const k = `planner_${day}_${col}`;
+      const v = store.get(k,"");
+      if(col==="Notes"){
+        html += `<td><textarea data-key="${k}" placeholder="Notes...">${v}</textarea></td>`;
+      } else {
+        html += `<td><input data-key="${k}" value="${v}" placeholder="${col==='Water'?'e.g. 8 glasses':'Add meal idea'}"></td>`;
+      }
+    });
+    html += "</tr>";
+  });
+  table.innerHTML = html;
+  table.querySelectorAll("input,textarea").forEach(el=>{
+    el.oninput = ()=> store.set(el.dataset.key, el.value);
+  });
+}
+
+/* ---------------- SUPPLEMENTS ---------------- */
+const supplementTimes = [
+  {key:"morning", label:"Morning", icon:"🌅"},
+  {key:"afternoon", label:"Afternoon", icon:"☀️"},
+  {key:"evening", label:"Evening", icon:"🌙"},
+];
+const supplementItems = [
+  {key:"probiotic", label:"Probiotic", icon:"🦠"},
+  {key:"vitaminD", label:"Vitamin D", icon:"☀️"},
+  {key:"omega3", label:"Omega 3", icon:"🐟"},
+  {key:"magnesium", label:"Magnesium", icon:"🪨"},
+  {key:"fiber", label:"Fiber supplement", icon:"🌾"},
+];
+function renderSupplements(){
+  const c = document.getElementById("supplementContainer");
+  c.innerHTML = "";
+  supplementTimes.forEach(t=>{
+    const card = document.createElement("div");
+    card.className = "card";
+    let rows = "";
+    supplementItems.forEach(s=>{
+      const k = `supp_${t.key}_${s.key}_d${currentDay}`;
+      const checked = store.get(k,false);
+      rows += `<div class="check-item ${checked?'checked':''}" data-key="${k}" style="padding:9px 12px;">
+        <div class="checkbox">${checked?"✓":""}</div><div class="label" style="font-size:13px;">${s.icon} ${s.label}</div>
+      </div>`;
+    });
+    card.innerHTML = `<h3>${t.icon} ${t.label}</h3>${rows}`;
+    card.querySelectorAll(".check-item").forEach(el=>{
+      el.onclick = ()=>{ const k=el.dataset.key; store.set(k, !store.get(k,false)); renderSupplements(); };
+    });
+    c.appendChild(card);
+  });
+}
+
+/* ---------------- SYMPTOMS ---------------- */
+const symptoms = [
+  {key:"energy",label:"Energy",icon:"⚡"},{key:"mood",label:"Mood",icon:"🙂"},
+  {key:"brainfog",label:"Brain Fog (clarity)",icon:"🧠"},{key:"bloating",label:"Bloating",icon:"🎈"},
+  {key:"gas",label:"Gas",icon:"💨"},{key:"cravings",label:"Sugar Cravings",icon:"🍬"},
+  {key:"sleep",label:"Sleep Quality",icon:"🌙"},{key:"digestion",label:"Digestion",icon:"🌿"},
+  {key:"skin",label:"Skin",icon:"✨"},{key:"stool",label:"Stool Consistency",icon:"🚽"},
+];
+function renderSymptoms(){
+  const c = document.getElementById("symptomsContainer");
+  c.innerHTML = "";
+  symptoms.forEach(s=>{
+    const k = `sym_${s.key}_d${currentDay}`;
+    const v = store.get(k,5);
+    const div = document.createElement("div");
+    div.className = "card score-card";
+    div.innerHTML = `<div class="row"><div class="name">${s.icon} ${s.label}</div><div class="score-val">${v}</div></div>
+      <input type="range" min="1" max="10" value="${v}">`;
+    div.querySelector("input").oninput = (e)=>{
+      store.set(k, Number(e.target.value));
+      div.querySelector(".score-val").textContent = e.target.value;
+      renderSymptomsTrend();
+    };
+    c.appendChild(div);
+  });
+  renderSymptomsTrend();
+}
+function renderSymptomsTrend(){
+  const wrap = document.getElementById("symptomsTrendBars");
+  let html = "";
+  symptoms.forEach(s=>{
+    const v = store.get(`sym_${s.key}_d${currentDay}`,5);
+    html += `<div style="margin-bottom:10px;">
+      <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px;"><span>${s.icon} ${s.label}</span><span>${v}/10</span></div>
+      <div class="pbar-track"><div class="pbar-fill" style="width:${v*10}%"></div></div>
+    </div>`;
+  });
+  wrap.innerHTML = html;
+}
+
+/* ---------------- HABIT GRID ---------------- */
+const habitList = [
+  {key:"water",label:"Water",icon:"💧"},{key:"exercise",label:"Exercise",icon:"🏃"},
+  {key:"sleep",label:"Sleep",icon:"🌙"},{key:"veg",label:"Vegetables",icon:"🥦"},
+  {key:"protein",label:"Protein",icon:"🍗"},{key:"ferment",label:"Fermented food",icon:"🫙"},
+  {key:"fiber",label:"Fiber",icon:"🌾"},{key:"nosugar",label:"No added sugar",icon:"🚫🍬"},
+  {key:"stress",label:"Stress management",icon:"🧘"},{key:"read",label:"Read 10 min",icon:"📖"},
+];
+function renderHabits(){
+  const table = document.getElementById("habitsTable");
+  let head = `<tr><th class="habit-name">Habit</th>`;
+  for(let d=1; d<=30; d++) head += `<th class="day-num">${d}</th>`;
+  head += "</tr>";
+  let body = "";
+  habitList.forEach(h=>{
+    body += `<tr><td class="habit-name">${h.icon} ${h.label}</td>`;
+    for(let d=1; d<=30; d++){
+      const k = `habit_${h.key}_d${d}`;
+      const on = store.get(k,false);
+      body += `<td class="cell"><div class="hb-box ${on?'on':''}" data-key="${k}"></div></td>`;
+    }
+    body += "</tr>";
+  });
+  table.innerHTML = head+body;
+  table.querySelectorAll(".hb-box").forEach(el=>{
+    el.onclick = ()=>{
+      const k = el.dataset.key;
+      const newVal = !store.get(k,false);
+      store.set(k,newVal);
+      el.classList.toggle("on", newVal);
+    };
+  });
+}
+
+/* ---------------- REFLECTION ---------------- */
+let reflectionWeek = 1;
+const journalQs = [
+  {key:"feel", label:"How did I feel?"},
+  {key:"better", label:"What foods made me feel better?"},
+  {key:"symptoms", label:"What foods caused symptoms?"},
+  {key:"energylvl", label:"Energy level?"},
+  {key:"sleepq", label:"Sleep quality?"},
+  {key:"wins", label:"Wins this week?"},
+  {key:"challenges", label:"Challenges?"},
+  {key:"goals", label:"Goals for next week?"},
+];
+function changeReflectionWeek(d){
+  reflectionWeek = Math.min(4, Math.max(1, reflectionWeek+d));
+  document.getElementById("reflWeekVal").textContent = reflectionWeek;
+  renderJournal();
+}
+function renderJournal(){
+  const c = document.getElementById("journalContainer");
+  c.innerHTML = "";
+  journalQs.forEach(q=>{
+    const k = `journal_w${reflectionWeek}_${q.key}`;
+    const v = store.get(k,"");
+    const div = document.createElement("div");
+    div.className = "card journal-card";
+    div.innerHTML = `<label>${q.label}</label><textarea placeholder="Write here...">${v}</textarea>`;
+    div.querySelector("textarea").oninput = (e)=> store.set(k, e.target.value);
+    c.appendChild(div);
+  });
+}
+
+/* ---------------- FINAL REVIEW ---------------- */
+const vsMetrics = [
+  {key:"weight", label:"Weight (optional)"},
+  {key:"waist", label:"Waist (optional)"},
+  {key:"energy", label:"Energy"},
+  {key:"mood", label:"Mood"},
+  {key:"digestion", label:"Digestion"},
+  {key:"skin", label:"Skin"},
+  {key:"cravings", label:"Sugar Cravings"},
+  {key:"sleep", label:"Sleep"},
+  {key:"overall", label:"Overall Health"},
+];
+function renderVs(){
+  const card = document.getElementById("vsCard");
+  let html = `<div class="vs-row"><div></div><div class="metric">Metric</div><div></div></div>`;
+  html = `<div class="vs-row" style="border-bottom:2px solid var(--line);"><div class="metric" style="text-align:left;color:var(--forest-deep);">Day 1</div><div class="metric"></div><div class="metric" style="text-align:right;color:var(--forest-deep);">Day 30</div></div>`;
+  vsMetrics.forEach(m=>{
+    const k1 = `vs_${m.key}_day1`, k2 = `vs_${m.key}_day30`;
+    html += `<div class="vs-row">
+      <input data-key="${k1}" value="${store.get(k1,'')}" placeholder="—">
+      <div class="metric">${m.label}</div>
+      <input data-key="${k2}" value="${store.get(k2,'')}" placeholder="—">
+    </div>`;
+  });
+  card.innerHTML = html;
+  card.querySelectorAll("input").forEach(el=> el.oninput = ()=> store.set(el.dataset.key, el.value));
+}
+
+/* ---------------- EXERCISE TRACKER ---------------- */
+// Day 1 = Monday. Weekday index 0=Mon ... 6=Sun
+const weekdayNames = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+function weekdayIndexForDay(d){
+  return (d-1) % 7; // 0..6
+}
+const exercisePlan = {
+  0: {label:"Whole Body Strength", icon:"🏋️", rest:false, items:[
+    "Bodyweight squats — 3 x 12","Push-ups (or knee push-ups) — 3 x 10","Glute bridges — 3 x 15",
+    "Plank hold — 3 x 30 sec","Standing lunges — 3 x 10 per leg","Cool-down stretch — 5 min"]},
+  1: {label:"Cardio", icon:"🏃", rest:false, items:[
+    "Warm-up walk/march — 5 min","Brisk walk, jog, or cycle — 20 min","Jumping jacks — 3 x 30 sec",
+    "High knees — 3 x 30 sec","Cool-down + stretch — 5 min"]},
+  2: {label:"Target: Upper Body & Core", icon:"💪", rest:false, items:[
+    "Push-ups — 3 x 10","Tricep dips (chair) — 3 x 12","Plank shoulder taps — 3 x 16",
+    "Bicycle crunches — 3 x 20","Superman back extensions — 3 x 12","Cool-down stretch — 5 min"]},
+  3: {label:"Cardio", icon:"🚴", rest:false, items:[
+    "Warm-up walk/march — 5 min","Steady cardio: walk, jog, dance, or cycle — 20 min",
+    "Step-ups or stair climbs — 3 x 12 per leg","Cool-down + stretch — 5 min"]},
+  4: {label:"Target: Lower Body & Core", icon:"🦵", rest:false, items:[
+    "Squats — 3 x 15","Glute bridges — 3 x 15","Calf raises — 3 x 15",
+    "Side plank — 2 x 30 sec per side","Dead bug core exercise — 3 x 10","Cool-down stretch — 5 min"]},
+  5: {label:"Rest Day", icon:"🌿", rest:true, items:["Gentle stretching (optional) — 10 min","Leisurely walk (optional)","Hydrate & prioritize sleep"]},
+  6: {label:"Rest Day", icon:"🌿", rest:true, items:["Gentle stretching (optional) — 10 min","Leisurely walk (optional)","Hydrate & prioritize sleep"]},
+};
+
+function renderExercise(){
+  const wIdx = weekdayIndexForDay(currentDay);
+  const plan = exercisePlan[wIdx];
+  const dayName = weekdayNames[wIdx];
+  document.getElementById("exerciseDayLabel").textContent = `${plan.icon} ${dayName} — ${plan.label}`;
+  document.getElementById("exerciseDaySub").textContent = plan.rest
+    ? "Rest day — let your body recover. Movement below is optional."
+    : "Check off each exercise as you complete it.";
+
+  const c = document.getElementById("exerciseContainer");
+  c.innerHTML = "";
+  const card = document.createElement("div");
+  card.className = "card";
+  card.style.maxWidth = "560px";
+  let rows = "";
+  plan.items.forEach((ex, i)=>{
+    const k = `exercise_d${currentDay}_i${i}`;
+    const checked = store.get(k,false);
+    rows += `<div class="check-item ${checked?'checked':''}" data-key="${k}">
+      <div class="checkbox">${checked?"✓":""}</div><div class="label">${ex}</div>
+    </div>`;
+  });
+  card.innerHTML = (plan.rest? `<div class="badge gold" style="margin-bottom:14px;">🌿 Rest & Recovery Day</div>` : `<div class="badge green" style="margin-bottom:14px;">${plan.icon} Training Day</div>`) + rows;
+  card.querySelectorAll(".check-item").forEach(el=>{
+    el.onclick = ()=>{ const k = el.dataset.key; store.set(k, !store.get(k,false)); renderExercise(); };
+  });
+  c.appendChild(card);
+
+  // weekly overview
+  const overview = document.getElementById("exerciseWeekOverview");
+  overview.innerHTML = "";
+  weekdayNames.forEach((name, idx)=>{
+    const p = exercisePlan[idx];
+    const div = document.createElement("div");
+    div.className = "card";
+    if(idx === wIdx) div.style.borderColor = "var(--sage)";
+    div.innerHTML = `
+      <div class="row" style="margin-bottom:8px;">
+        <div class="name"><span class="icon-badge" style="background:${p.rest? '#F3E6BF':'#E3ECDE'}">${p.icon}</span>${name}</div>
+      </div>
+      <div class="muted" style="margin-bottom:6px;">${p.label}</div>
+      ${p.rest ? `<span class="badge gold">Rest</span>` : `<span class="badge green">Active</span>`}
+    `;
+    overview.appendChild(div);
+  });
+}
+
+/* ---------------- INIT ---------------- */
+function renderAll(){
+  renderDashboardTop();
+  renderDashboardTrackers();
+  renderWeeks();
+  renderMorning();
+  renderMeals();
+  renderAllowed();
+  renderAvoid();
+  renderPlanner();
+  renderSupplements();
+  renderSymptoms();
+  renderHabits();
+  renderJournal();
+  renderVs();
+  recalcDailyPct();
+  renderExercise();
+}
+renderAll();
+</script>
+</body>
+</html>
